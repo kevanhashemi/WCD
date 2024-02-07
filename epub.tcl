@@ -390,6 +390,9 @@ puts "Assuming book abbreviated name $name\."
 set book "$name\.html"
 puts "Will process file $book\."
 
+#EPUB_paragraphs $book
+#exit 
+
 puts "Generating internal table of contents."
 set title_list [EPUB_contents $book]
 
@@ -412,7 +415,8 @@ if {[file exists $epub]} {
 }
 
 puts "Compressing files to $epub."
-exec zip -ruX $epub mimetype META-INF {*}[glob *] \
+exec zip -ruX $epub mimetype
+exec zip -ruX $epub META-INF {*}[glob *] \
 	--exclude epub.tcl \
 	--exclude $book \
 	--exclude readme.md
