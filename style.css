@@ -1,0 +1,98 @@
+/* 
+	Styles for presentation of ebook contents, suitable fo use with the
+	EPUB generator package. This file should be linked in the header of
+	the book's HTML document.
+*/
+
+/* Space inserted above and below the top and bottom lines of text. */
+@page {
+  margin-bottom: 5pt;
+  margin-top: 5pt;
+}
+
+/* The default text formatting, associated with the body of each chapter. */
+body {
+	display: block;
+	font-size: 1em;
+	padding-left: 0;
+	padding-right: 0;
+	margin: 1em;
+	line-height: 1.2;
+}
+
+/* How to format each paragraph in the text: indent, justification, spacing. */
+p { 
+	text-align: justify;
+	text-indent: 2em; 
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+}
+
+/* Define italics for the ebook. */
+i {
+  font-style: italic;
+}
+
+/* The title page announcement of the book title: size, alignment, and weight. */
+h1 {
+	font-size: 3em;
+	text-align: center;
+	font-weight: bold;
+}
+
+/* The chapter title formatting: page break policy, space above title, size. */
+h2 {
+	font-size: 2em;
+}
+
+/* The table of contents title size, page break policy, margins. */
+h3 {
+	font-size: 2em;
+	margin-top: 0em;
+	margin-bottom: 0em;
+	page-break-before: always;
+}
+
+/* Style for copyright and publication details on title page. */
+.cop {
+	text-align: center;
+	text-indent: 0;
+	margin: 0.5em;
+}
+
+/* Style for lines in the table of contents at start of document. */
+.toc {
+	font-size: 1.2em;
+	text-align: left;
+	text-indent: 0;
+	margin: 0;
+}
+
+/* Style for chapter prelude. */
+.prelude {
+	font-size: 1em;
+	font-style: italic;
+	margin-bottom: 1.0em;
+}
+
+/* How to display the cover image. */
+.image-cover {
+	text-align: center;
+	margin: 1em;
+	page-break-after: always;
+}
+
+/* How to display full-page images: page break policy, alignment, margins. */
+.image-fp {
+	text-align: center;
+	margin: 1em;
+	page-break-before: always;
+}
+
+/* How to display in-line images: page break policy, alignment, margins. */
+.image-il {
+	text-align: center;
+	margin: 1em;
+	page-break-before: auto;
+}
+
